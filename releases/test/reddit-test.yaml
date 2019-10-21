@@ -20,7 +20,7 @@ spec:
     ui:
       image:
         repository: dmitryshomrin/ui
-        tag: 1.0.0
+        tag: 1.0.2
     post:
       image:
         repository: dmitryshomrin/post
