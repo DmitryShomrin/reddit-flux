@@ -1,0 +1,31 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: reddit-test
+  namespace: test
+  annotations:
+    # flux.weave.works/tag.chart-image: semver:~0.1
+    fluxcd.io/tag.comment: semver:~1.0
+    fluxcd.io/tag.post: semver:~1.0
+    fluxcd.io/tag.ui: semver:~1.0
+    fluxcd.io/automated: 'true'
+spec:
+  releaseName: reddit-test
+  chart:
+    git: git@github.com:DmitryShomrin/reddit-flux
+    path: charts/reddit
+    ref: master
+  values:
+    ui:
+      image:
+        repository: dmitryshomrin/ui
+        tag: 1.0.0
+    post:
+      image:
+        repository: dmitryshomrin/post
+        tag: 1.0.0
+    comment:
+      image:
+        repository: dmitryshomrin/comment
+        tag: 1.0.0
