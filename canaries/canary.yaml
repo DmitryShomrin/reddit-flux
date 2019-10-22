@@ -1,13 +1,14 @@
 apiVersion: flagger.app/v1alpha3
 kind: Canary
 metadata:
-  name: reddit-test
+  name: reddit-test-ui-746668f5d7-tql5s
   namespace: test
 spec:
+  provider: istio
   targetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: reddit-test
+    app: ui
   progressDeadlineSeconds: 60
   # autoscalerRef:
   #   apiVersion: autoscaling/v2beta1
