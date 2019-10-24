@@ -5,4 +5,3 @@ metadata:
   labels:
     istio-injection: enabled
     appmesh.k8s.aws/sidecarInjectorWebhook: enabled
-    status.sidecar.istio.io/port: "0"

@@ -10,7 +10,6 @@ metadata:
     fluxcd.io/tag.post: semver:~1.0
     fluxcd.io/tag.ui: semver:~1.0
     fluxcd.io/automated: 'true'
-    status.sidecar.istio.io/port: "0"
 spec:
   releaseName: reddit-test
   chart:
