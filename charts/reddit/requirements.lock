@@ -1,0 +1,15 @@
+dependencies:
+- name: ui
+  repository: https://raw.githubusercontent.com/DmitryShomrin/reddit-gitops-hw/master
+  version: 1.0.0
+- name: post
+  repository: https://raw.githubusercontent.com/DmitryShomrin/reddit-gitops-hw/master
+  version: 1.0.0
+- name: comment
+  repository: https://raw.githubusercontent.com/DmitryShomrin/reddit-gitops-hw/master
+  version: 1.0.0
+- name: mongodb
+  repository: https://kubernetes-charts.storage.googleapis.com
+  version: 0.4.18
+digest: sha256:21e07a5b2f1ea0dc1cd85f898fa4f6686ea313524bc3cd700a08a2f624b004e4
+generated: 2019-10-24T13:12:56.07073+03:00

@@ -1,0 +1,53 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: reddit-test-comment
+spec:
+  hosts:
+  - reddit-test-comment
+  http:
+  - route:
+    - destination:
+        host: comment
+
+---
+
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: reddit-test-post
+spec:
+  hosts:
+  - reddit-test-post
+  http:
+  - route:
+    - destination:
+        host: post
+
+---
+
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: reddit-test-mongodb
+spec:
+  hosts:
+  - reddit-test-mongodb
+  http:
+  - route:
+    - destination:
+        host: reddit-test-mongodb
+
+---
+
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: ui
+spec:
+  hosts:
+  - ui
+  http:
+  - route:
+    - destination:
+        host: ui
